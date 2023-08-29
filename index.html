@@ -4,111 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e7161ee384.js" crossorigin="anonymous"></script>
     <title>Minha Página</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav li {
-            margin: 0 20px;
-        }
-
-        main {
-            flex: auto;
-            display: flex;
-            height: 70svh;
-            min-height: 70svh;
-        }
-
-        aside {
-            background-color: #444;
-            color: white;
-            padding: 20px;
-            width: 10%;
-        }
-
-        .menuLateralOculto {
-            background-color: #444;
-            color: white;
-            text-align: center;
-            width: 50px;
-            display: none;
-        }
-
-        .content {
-            flex: 1;
-            margin-left: 20px;
-            overflow: auto;
-            width: 90%;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-        }
-
-        .flex-container {
-            display: flex;
-            /* min-height: 71vh;
-            height: 71vh; */
-        }
-
-        .flex-item {
-            flex: 1;
-        }
-
-        .imgImperium{
-            width: 200px;
-        }
-
-        @media only screen and (max-width: 714px) {
-            img {
-                width: 100%;
-                height: auto;
-            }
-
-            aside {
-                display: none;
-            }
-
-            .menuLateralOculto {
-                display: block;
-            }
-        }
-
-        @media only screen and (max-width: 300px) {
-            aside {
-                display: none;
-            }
-
-            .menuLateralOculto {
-                display: none;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -126,17 +24,16 @@
     <main>
         <div class="flex-container">
             <div class="menuLateralOculto">
-                <a onclick="expandeGaveta()">Bla</a>
+               <a onclick="expandeGaveta()"><i class="fas fa-align-justify"></i></a>
+               <p><i class="fas fa-home"></i></p>
+               <p><i class="fas fa-address-book"></i></p>
             </div>
 
             <aside class="menuLateralAberto">
-                <a onclick="expandeGaveta()">Ocultar</a>
-                <h3>Menu Lateral</h3>
-                <ul>
-                    <li><a href="#">Opção 1</a></li>
-                    <li><a href="#">Opção 2</a></li>
-                    <li><a href="#">Opção 3</a></li>
-                </ul>
+                <h3 onclick="expandeGaveta()"><i class="fas fa-angle-double-left"></i> Menu Lateral</h3>
+                <p><i class="fas fa-home"></i> Início</p>
+                <p>Sobre</p>
+                <p><i class="fas fa-address-book"></i> Contato</p>
             </aside>
 
             <div class="content">
@@ -145,9 +42,10 @@
                     exemplo com um cabeçalho, um menu lateral e um rodapé. Esta é uma página de exemplo com um
                     cabeçalho, um menu lateral e um rodapé.</p>
 
-                <img class="imgImperium"
-                    src="https://static.wikia.nocookie.net/ptstarwars/images/2/2e/Imperial_Emblem.svg/revision/latest?cb=20150220191122">
+                <img class="imgImperium" src="src/Imperial_Emblem.svg">
 
+                <p>Essa é uma pagina de teste</p>
+                <p>Essa é uma pagina de teste</p>
                 <p>Essa é uma pagina de teste</p>
                 <p>Essa é uma pagina de teste</p>
                 <p>Essa é uma pagina de teste</p>
@@ -158,24 +56,7 @@
     <footer>
         <p>&copy; 2023 Minha Página. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
-
-<script>
-    function expandeGaveta() {
-        let gavetaAberta = document.getElementsByClassName('menuLateralAberto')[0]
-        let gavetaFechada = document.getElementsByClassName('menuLateralOculto')[0]
-
-        if (gavetaAberta.style.display == "block") {
-
-            gavetaFechada.style.display = "block"
-            gavetaAberta.style.display = "none"
-
-        }
-        else {
-            gavetaFechada.style.display = "none"
-            gavetaAberta.style.display = "block"
-        }
-    }
-</script>

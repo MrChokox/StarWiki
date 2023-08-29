@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+main {
+    flex: auto;
+    display: flex;
+    height: 70svh;
+    min-height: 70svh;
+}
+
+aside {
+    background-color: #444;
+    color: white;
+    padding: 20px;
+    width: 10%;
+}
+
+.menuLateralOculto {
+    background-color: #444;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 50px;
+    display: none;
+}
+
+.content {
+    flex: 1;
+    margin-left: 20px;
+    overflow: auto;
+    width: 90%;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.flex-container {
+    display: flex;
+    /* min-height: 71vh;
+    height: 71vh; */
+}
+
+.flex-item {
+    flex: 1;
+}
+
+.imgImperium {
+    width: 200px;
+}
+
+@media only screen and (max-width: 714px) {
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    aside {
+        display: none;
+    }
+
+    .menuLateralOculto {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    aside {
+        display: none;
+    }
+
+    .menuLateralOculto {
+        display: none;
+    }
+}
