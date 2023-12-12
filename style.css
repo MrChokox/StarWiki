@@ -7,6 +7,38 @@ body {
     min-height: 100vh;
 }
 
+.menuImperio{
+    color: red;
+}
+
+.menuImperio:hover .empire-img {
+    display: block;
+}
+
+.menuRepublica{
+    color: blue;
+}
+
+.menuRepublica:hover .republic-img {
+    display: block;
+}
+
+.menuJedis{
+    color: greenyellow;
+}
+
+.menuJedis:hover .jedis-img {
+    display: block;
+}
+
+.menuRebels{
+    color: orange;
+}
+
+.menuRebels:hover .rebels-img {
+    display: block;
+}
+
 header {
     background-color: #333;
     color: white;
@@ -22,8 +54,20 @@ nav ul {
     justify-content: center;
 }
 
+nav img{
+    width: 50px;
+    display: none;
+    margin-top: 5px;
+}
+
 nav li {
     margin: 0 20px;
+}
+
+nav li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 main {
@@ -38,6 +82,7 @@ aside {
     color: white;
     padding: 20px;
     width: 10%;
+    transition: margin 0.4s;
 }
 
 .menuLateralOculto {
